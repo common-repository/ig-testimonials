@@ -1,0 +1,111 @@
+@import 'bourbon';
+@import 'neat';
+.ig-resources,
+.ig-intro,
+.ig-footer {
+    @include clearfix;
+    li {
+        @include span-columns(6);
+        @include omega(2n);
+    }
+}
+.ig-intro {
+    li {
+        text-align: left;
+        background: #fff;
+        padding: 25px;
+        border: 1px solid #dedede;
+        h2 {
+            margin: 0;
+            text-align: left;
+        }
+        &.evidence {
+            border-color:  #fc3;
+             .button-upgrade {
+                background: #fc3;
+                border:1px solid darken(#fc3,15%);
+                -webkit-box-shadow: 0 1px darken(#fc3,15%);
+                box-shadow: 0 1px darken(#fc3,15%);
+                -moz-box-shadow: 0 1px darken(#fc3,15%);
+                -webkit-appearance: none;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                color: #5d4b16;
+                text-decoration: none;
+                font-size: 13px;
+                line-height: 26px;
+                height: 28px;
+                padding: 0 10px 1px;
+                cursor: pointer;
+                display: inline-block;
+                background: #fc3;
+                color: #5d4b16;
+                &:hover,
+                &:focus {
+                    background: #fd3;
+                    color: #5d4b16;
+                    border-color: darken(#fc3,5%);
+                }
+            }
+        }
+    }
+}
+.ig-resources {
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    margin: 45px 0 25px 0;
+    padding: 25px 0 45px 0;
+     .plugins,.themes {
+        .item {
+            padding: 8px 10px;
+            background: #fafafa;
+            border: 1px solid #dedede;
+            border-bottom: none;
+            &:nth-child(2n) {
+                background: #f6f6f6;
+            }
+            &:last-child {
+                border-bottom: 1px solid #dedede;
+            }
+            .item-name {
+                width: 150px;
+                display: inline-block;
+            }
+            .item-status,
+            .item-buttons {
+                text-transform: lowercase;
+                font-size: .9em;
+                a {
+                    text-decoration: none;
+                }
+                &:before {
+                    content:'►';
+                    font-size: .8em;
+                    color: #dedede;
+                    margin: 4px;
+                }
+            }
+        }
+    }
+}
+.ig-credits {
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid #dedede;
+    padding: 25px 0;
+    margin-top: 45px;
+    font-size: .9em;
+    a {
+        text-decoration: none;
+    }
+}
+@media screen and (max-width: 782px) {
+    .ig-intro,
+    .ig-resources,
+    .ig-footer {
+        li {
+            @include span-columns(12);
+        }
+    }
+}

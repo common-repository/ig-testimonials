@@ -1,0 +1,108 @@
+// Testimonial gallery shortcode
+.ig-testimonials-page {
+    .page-numbers {
+        background: #fff;
+        list-style:none;
+        margin: 10px 0;
+        padding: 0;
+        display: inline-block;
+        border-bottom: 1px solid #dedede;
+        border-top: 1px solid #dedede;
+        border-right: 1px solid #dedede;
+        border-left: none;
+        border-radius: 2px;
+        -webkit-border-radius:2px;
+        -moz-border-radius:2px;
+        li {
+            display: inline-block;
+            float: left;
+            padding: .2em .8em;
+            margin: 0;
+            border-left: 1px solid #dedede;
+            border-bottom: none;
+            border-top: none;
+            border-right:none;
+            a {
+                border:0;
+                padding:0;
+                margin: 0;
+                background: none;
+                text-shadow: none;
+                box-shadow: none!important;
+                &:hover,
+                &:focus {
+                    @extend a;
+                }
+            }
+            .current {
+                @extend a;
+            }
+        }
+    }
+}
+//Testimonials
+.ig-testimonials {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1em;
+    outline: none;
+    .image {
+        display: inline-block;
+        float:left;
+        margin: 5px 20px 15px 0;
+        padding: 0 2px;
+    }
+    .text{
+        display: block;
+        clear: right;
+        transform: translate!important;
+        padding: 0 2px;
+    }
+    .name{
+        display: inline-block;
+        clear: right;
+        padding: 0 2px 4px 2px;
+        margin: 0 0 4px 0;
+    }
+    .job, .website {
+        &:before {
+            font-family: Arial, Helvetica, sans-serif;
+            content: ' | ';
+            display: inline-block;
+            color: #888;
+        }
+    }
+    .website {
+        &:after {
+            font-family: Arial, Helvetica, sans-serif;
+            content: "→";
+            margin-left:5px;
+        }
+    }
+}
+//Shortcode carousel
+.ig-testimonials-carousel {
+    .ig-testimonials {
+        cursor: -webkit-grab;
+        margin: 5px;
+    }
+    .slick-dots {
+        bottom: -10px;
+    }
+}
+//Testimonials widget
+.widget_ig_testimonials_carousel_widget {
+  .slick-dots {
+    text-align: left;
+  }
+  .image {
+     margin: 0 0 8px 0px;
+     img {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        margin: 0 0 5px 0px;
+     }
+  }
+
+}
